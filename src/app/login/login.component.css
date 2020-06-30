@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.cantainer {
+  position: relative;
+  height: 963px;
+}
+
+.top {
+  height: 400px;
+  background: #FF8D1A;
+  position: relative;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: absolute;
+  right: 150px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0px 0px 36px #777;
+  border-radius: 5px;
+  padding: 50px;
+
+}
+
+h2 {
+  font-size: 50px;
+  letter-spacing: 10px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: -20px;
+  left: 150px;
+}
+
+.login h3 {
+  text-align: center;
+}
+
+.login div {
+  width: 100%;
+  height: 80px;
+  border: #ccc 2px solid;
+  border-radius: 70px;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  margin: 40px 0;
+}
+
+.login input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 21px;
+
+}
+
+.login input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.login button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 80px;
+  border-radius: 70px;
+  background: #FF8D1A;
+  font-size: 18px;
+  color: #fff;
+}
+
+.login .activeU,
+.login .activeP {
+  border-color: #f56;
+}
+
+.login .activeU::after,
+.login .activeP::after
+ {
+  content: "注意：账号不能为空";
+  color: #f56;
+  display: block;
+  margin-top: 18px;
+}
+.login .activeP::after
+ {
+  content: "注意：密码不能为空";
+}
+#account{
+  margin-top: 25px;
+  text-align: center;
+  color: #f56;
+}
