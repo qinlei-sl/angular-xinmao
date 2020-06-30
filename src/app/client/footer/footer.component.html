@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="footer">
+    <div nz-row>
+      <div nz-col nzSpan="4">
+        <div class="userImg">
+          <img src="../../assets/img7159694579f0.jpeg" alt="">
+        </div>
+      </div>
+      <div nz-col nzSpan="9" class="table" nz-row >
+        <p nz-col nzSpan="6" *ngFor="let item of table; let index = index" (click)="click(index)" [class] = "{active:index==key?true:false}">
+          {{item}}
+        </p>
+      </div>
+      <div nz-col nzSpan="9" class="search">
+        <div>
+          <input type="text" placeholder="搜索">
+          <input type="button" value="搜索">
+        </div>
+      </div>
+      <div nz-col nzSpan="2" class="notice">
+        <p>通知</p>
+      </div>
+    </div>
+  </div>
+</div>

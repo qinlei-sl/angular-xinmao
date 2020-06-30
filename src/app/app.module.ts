@@ -14,6 +14,9 @@ import en from '@angular/common/locales/en';
 import { RouterRoutes } from './router.routing';
 import { ClientComponent } from './client/client.component';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { AngularFileUploaderModule } from 'angular-file-uploader'
+import { FooterComponent } from './client/footer/footer.component';
+import { UploadComponent } from './client/upload/upload.component';
 
 
 registerLocaleData(en);
@@ -22,7 +25,9 @@ registerLocaleData(en);
    declarations: [
       AppComponent,
       LoginComponent,
-      ClientComponent
+      ClientComponent,
+      FooterComponent,
+      UploadComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +39,8 @@ registerLocaleData(en);
       ReactiveFormsModule,
       HttpClientJsonpModule,
       HttpClientModule,
-      NzGridModule
+      NzGridModule,
+      AngularFileUploaderModule,
    ],
    providers: [],
    bootstrap: [

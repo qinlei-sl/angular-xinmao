@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.main {
+  padding: 10px 50px;
+  margin: 0 auto;
+  /* background: #f56; */
+  width: 100%;
+  min-width: 1024px;
+  height: 650px;
+}
+
+.main .left {
+  height: 100%;
+  display: flex;
+  /* 纵向布局 */
+  flex-flow: column;
+}
+
+.main .left div {
+  border: 1px solid #aaa;
+  box-shadow: 0 0 2px #aaa;
+  flex: 1;
+  margin: 5px;
+  background: #eee;
+}
+
+.main .right {
+  height: 100%;
+  background: #5f5;
+}
+/* #loader{
+  display: none;
+} */

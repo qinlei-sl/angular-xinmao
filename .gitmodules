@@ -1,0 +1,3 @@
+[submodule "src/app/client/file-uploader"]
+	path = src/app/client/file-uploader
+	url = git@github.com:qinlei-sl/angular-file-uploader.git

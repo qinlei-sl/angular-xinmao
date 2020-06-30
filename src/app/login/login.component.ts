@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, JsonpClientBackend } from '@angular/common/http';
+import { AccountService } from '../server/account.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +23,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private http: HttpClient,
-    private jsonp: JsonpClientBackend
+    private jsonp: JsonpClientBackend,
+    private accountService:AccountService
   ) { }
 
 
@@ -47,22 +50,24 @@ export class LoginComponent implements OnInit {
     var password: string = this.f.password.value;
     var url:string = "http://localhost:3000/login"
 
-    this.http.get(url).subscribe( (data)=>{
-      // 如果请求成功运行此代码
-      if (username == data[0].username && password == data[0].password) {
-        this.account = false;
-        console.log("成功跳转")
-        //判断成功跳转页面
-        this.router.navigate(['../client'], { relativeTo: this.route });
-      } else {
-        this.account = true
-      }
-    }, function (err) {
-      // 如果请求失败运行此代码
-      console.log(err)
-    })
-    console.log(this.account)
-    console.log(this.f.username.value, this.f.password.value, this.f.username.errors)
+    this.accountService.login(username, password, url)
+    this.account = this.accountService.accountFun()
+    // this.http.get(url).subscribe( (data)=>{
+    //   // 如果请求成功运行此代码
+    //   if (username == data[0].username && password == data[0].password) {
+    //     this.account = false;
+    //     console.log("成功跳转")
+    //     //判断成功跳转页面
+    //     this.router.navigate(['../client'], { relativeTo: this.route });
+    //   } else {
+    //     this.account = true
+    //   }
+    // }, function (err) {
+    //   // 如果请求失败运行此代码
+    //   console.log(err)
+    // })
+    // console.log(this.account)
+    // console.log(this.f.username.value, this.f.password.value, this.f.username.errors)
   }
 
 }
