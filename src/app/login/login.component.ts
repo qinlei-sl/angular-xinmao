@@ -52,22 +52,6 @@ export class LoginComponent implements OnInit {
 
     this.accountService.login(username, password, url)
     this.account = this.accountService.accountFun()
-    // this.http.get(url).subscribe( (data)=>{
-    //   // 如果请求成功运行此代码
-    //   if (username == data[0].username && password == data[0].password) {
-    //     this.account = false;
-    //     console.log("成功跳转")
-    //     //判断成功跳转页面
-    //     this.router.navigate(['../client'], { relativeTo: this.route });
-    //   } else {
-    //     this.account = true
-    //   }
-    // }, function (err) {
-    //   // 如果请求失败运行此代码
-    //   console.log(err)
-    // })
-    // console.log(this.account)
-    // console.log(this.f.username.value, this.f.password.value, this.f.username.errors)
   }
 
 }

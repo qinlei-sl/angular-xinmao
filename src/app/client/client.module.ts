@@ -4,16 +4,22 @@ import { ClientComponent } from './client.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClientRouterRoutes } from './clientRouter.routing';
 import { UploadComponent } from './upload/upload.component';
+import { OrderComponent } from './order/order.component';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 @NgModule({
   imports: [
     CommonModule,
-    ClientRouterRoutes
+    ClientRouterRoutes,
+    NzTabsModule,
+
+    
   ],
   declarations: [
     ClientComponent,
     FooterComponent,
-    UploadComponent
+    UploadComponent,
+    OrderComponent
   ]
 })
 export class ClientModule { }

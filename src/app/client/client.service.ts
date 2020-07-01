@@ -1,46 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { WebUploaderComponent, File, FileStatus } from 'ngx-webuploader';
+import { Injectable } from '@angular/core';
+import { WebUploaderComponent } from 'ngx-webuploader';
 
 declare const $: any;
-@Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class UploadComponent implements OnInit {
-  loaderArray: any[] = [
-    {
-      datetiem: "2020-7-1",
-      name:"上传的第一个"
-    },
-    {
-      datetiem: "2020-7-1",
-      name: "上传的第二个"
-    },
-    {
-      datetiem: "2020-7-1",
-      name: "上传的第三个"
-    },
-  ];
-  afuConfig: any;
-  options: any = {
-    pick: '#picker',
-    disableWidgets: 'add-file',
-    dnd: ".Drag",
-    server: 'http://localhost:3000/comments',
-    disableGlobalDnd: true,
-    auto: true,
-    formData: {
-      title: "图片",
-      url: "../../",
-    }
-  }
-  constructor() { }
+export class ClientService {
 
-  ngOnInit() {
-
-    // console.log(Webuploader)
-  }
+constructor() { }
+  // 上传文件
   onReady(uploader: WebUploaderComponent) {
     let $list = $('#thelist'),
       state = 'pending',
@@ -74,15 +42,16 @@ export class UploadComponent implements OnInit {
         $percent.css('width', percentage * 100 + '%');
       })
       .on('uploadSuccess', (file: File) => {
-        console.log(file.lastModifiedDate)
-        var d = new Date();
-        var datetime = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-        var obj = {
+        //上传时间
+        var d = new Date(file.lastModifiedDate);
+        var datetime = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()
+        // console.log(datetime)
+        // console.log(file)
+        var filejson: any = {
           datetime,
           name: file.name
         }
-        this.loaderArray.push(obj)
-        console.log(this.loaderArray)
+        // localStorage.setItem("loader", JSON.stringify(filejson))
 
         $('#' + file.id).find('p.state').text('已上传');
 
@@ -118,8 +87,4 @@ export class UploadComponent implements OnInit {
     });
 
   }
-  onDestroy() {
-    console.log('onDestroy');
-  }
-
 }

@@ -17,9 +17,13 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { AngularFileUploaderModule } from 'angular-file-uploader'
 import { FooterComponent } from './client/footer/footer.component';
 import { UploadComponent } from './client/upload/upload.component';
-
+import { WebUploaderModule, WebUploaderConfig } from 'ngx-webuploader'
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 registerLocaleData(en);
+import { from } from 'rxjs';
+import { Options } from 'ts-node';
+import { OrderComponent } from './client/order/order.component';
 
 @NgModule({
    declarations: [
@@ -27,7 +31,8 @@ registerLocaleData(en);
       LoginComponent,
       ClientComponent,
       FooterComponent,
-      UploadComponent
+      UploadComponent,
+      OrderComponent
    ],
    imports: [
       BrowserModule,
@@ -41,6 +46,16 @@ registerLocaleData(en);
       HttpClientModule,
       NzGridModule,
       AngularFileUploaderModule,
+      NzTabsModule,
+      //文件加载模块
+      WebUploaderModule.forRoot(<WebUploaderConfig>{
+         options: <Options>{
+            swf: './assets/webuploader-0.1.5/Uploader.swf',
+            server: '/fileupload'
+         },
+         path: './assets/webuploader-0.1.5/',
+         dependentLib: './assets/jquery-3.2.1.min.js',
+      })
    ],
    providers: [],
    bootstrap: [

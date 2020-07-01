@@ -1,14 +1,33 @@
+ <app-footer></app-footer>
  <div class="main" nz-row>
    <div class="left" nz-col nzSm="6" nzSpan="6">
-     <div>
-       <img src="" alt="">
+
+     <div id="Drag1" class="Drag">
+       <img src="../../../assets/images/loader.png" alt="">
        <p>将文件拖拽到这里上传</p>
-       <angular-file-uploader [config]="afuConfig" id="loader"></angular-file-uploader>
      </div>
-     <div>2</div>
-     <div>3</div>
-     <div>4</div>
+     <div id="Drag2" class="Drag">
+       <img src="../../../assets/images/loader.png" alt="">
+       <p>将订单拖拽到这里上传</p>
+       <span>仅支持上传订单包</span>
+
+     </div>
+     <div id="Drag3" class="Drag">
+       <img src="../../../assets/images/loader.png" alt="">
+       <p>将数据拖拽到这里上传</p>
+       <span>仅支持上传数据包</span>
+     </div>
+     <webuploader [options]="options" (onReady)="onReady($event)" (onDestroy)="onDestroy()">
+       <!-- <div class="wu-example">
+        <div id="thelist" class="uploader-list"></div>
+        <div class="btns"> -->
+       <!-- <button id="ctlBtn" class="btn btn-default">开始上传</button> -->
+       <!-- </div>
+      </div> -->
+     </webuploader>
+     <div id="process">
+       <div id="thelist"></div>
+     </div>
    </div>
    <div class="right" nz-col nzSm="18" nzSpan="18"></div>
  </div>
- 

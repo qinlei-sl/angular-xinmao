@@ -3,12 +3,19 @@
   padding: 0;
 }
 .main {
-  padding: 10px 50px;
+  padding: 10px 100px;
   margin: 0 auto;
   /* background: #f56; */
   width: 100%;
   min-width: 1024px;
-  height: 650px;
+  /* display: flex;
+  flex-direction: column; */
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top:170px;
+  position: absolute;
+  left: 0;
+  top:0;
 }
 
 .main .left {
@@ -19,11 +26,11 @@
 }
 
 .main .left div {
-  border: 1px solid #aaa;
-  box-shadow: 0 0 2px #aaa;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 2px #ccc;
   flex: 1;
   margin: 5px;
-  background: #eee;
+  background: #FAFAFA;
 }
 
 .main .right {
@@ -33,3 +40,23 @@
 /* #loader{
   display: none;
 } */
+.Drag img{
+  width: 80px;
+  display: block;
+  margin:30px auto;
+}
+.Drag p{
+  width: 100%;
+  font-size:18px;
+}
+.Drag{
+  text-align: center;
+}
+.Drag span{
+  color: #999;
+}
+#process {
+  border: 0;
+  background-color: #fff;
+  box-shadow: none;
+}

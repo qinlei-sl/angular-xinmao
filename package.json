@@ -24,6 +24,7 @@
     "jquery": "^3.5.1",
     "ng-zorro-antd": "^9.2.2",
     "ngx-bootstrap": "^5.6.1",
+    "ngx-webuploader": "^7.0.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

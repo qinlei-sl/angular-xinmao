@@ -2,21 +2,16 @@
   padding: 0;
   margin: 0;
 }
-
-.container {
-  padding: 30px 5px;
-  /* display: flex;
-  flex-direction: column;
-  height: 100vh; */
-}
-
 .footer {
   width: 100%;
   min-width: 1024px;
-  height: 125px;
+  height: 16vh;
   /* background: #f56; */
   border-bottom: #FF8D1A 1px solid;
   padding: 0 50px;
+  position: relative;
+  z-index:100;
+  box-sizing: border-box;
 }
 
 .footer .content {
