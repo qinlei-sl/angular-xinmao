@@ -19,11 +19,16 @@ import { FooterComponent } from './client/footer/footer.component';
 import { UploadComponent } from './client/upload/upload.component';
 import { WebUploaderModule, WebUploaderConfig } from 'ngx-webuploader'
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import zh from '@angular/common/locales/zh';
+registerLocaleData(zh);
+
 
 registerLocaleData(en);
 import { from } from 'rxjs';
 import { Options } from 'ts-node';
 import { OrderComponent } from './client/order/order.component';
+import { TableDataComponent } from './client/tableData/tableData.component';
 
 @NgModule({
    declarations: [
@@ -32,7 +37,8 @@ import { OrderComponent } from './client/order/order.component';
       ClientComponent,
       FooterComponent,
       UploadComponent,
-      OrderComponent
+      OrderComponent,
+      TableDataComponent
    ],
    imports: [
       BrowserModule,
@@ -46,6 +52,7 @@ import { OrderComponent } from './client/order/order.component';
       HttpClientModule,
       NzGridModule,
       AngularFileUploaderModule,
+      NzDatePickerModule,
       NzTabsModule,
       //文件加载模块
       WebUploaderModule.forRoot(<WebUploaderConfig>{

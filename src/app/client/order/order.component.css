@@ -4,19 +4,22 @@
   padding:20px 50px 50px;
   
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 #main{
   /* border: 1px solid red; */
   min-width: 1024px;
   box-sizing: border-box;
   height: 80vh;
-  display: flex;
+  display:flex;
 }
-#main div{
+/* #main div{
   border: 2px solid #FF8D1A;
   border-radius: 20px;
   margin: 0 10px;
-  /* flex-grow: 1; */
-}
+} */
 :host ::ng-deep .ant-tabs .ant-tabs-left-bar {
   background-color: #ff8d1a;
 }
@@ -37,4 +40,16 @@
 }
 :host ::ng-deep .ant-tabs .ant-tabs-left-bar .ant-tabs-ink-bar{
   background:#ff8d1a;
+}
+:host ::ng-deep .ant-picker-range{
+  border-color: #ff8d1a;
+}
+.tableH3{
+  font-size:20px;
+  font-weight: 800;
+  border-bottom:1px solid #ff8d1a;
+}
+.orderData{
+  margin:20px 0px;
+  font-size: 18px;
 }
