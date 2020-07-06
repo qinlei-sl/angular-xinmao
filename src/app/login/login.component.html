@@ -2,10 +2,7 @@
   <div class="top">
     <h2>SHIMMER</h2>
   </div>
-
   <div class="login">
-
-
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <h3>登录</h3>
       <div [class]="{activeU:flag && f.username.errors}">
@@ -14,7 +11,7 @@
       <div [class]="{activeP:flag && f.password.errors}">
         <input type="password" formControlName="password" placeholder="密码">
       </div>
-      <button type="submit">登录</button>
+      <button nz-button type="submit" (click)="onSubmit()" [nzLoading]="account" nzShape="circle">登录</button>
       <p id="account" *ngIf="account">注：账号密码不匹配</p>
     </form>
   </div>

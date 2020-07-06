@@ -1,25 +1,19 @@
 .order{
   box-sizing: border-box;
   height: 84vh;
-  padding:20px 50px 50px;
-  
+  padding:0px 50px;
+  min-width: 1246px;
 }
 * {
   padding: 0;
   margin: 0;
 }
 #main{
-  /* border: 1px solid red; */
-  min-width: 1024px;
   box-sizing: border-box;
   height: 80vh;
   display:flex;
 }
-/* #main div{
-  border: 2px solid #FF8D1A;
-  border-radius: 20px;
-  margin: 0 10px;
-} */
+
 :host ::ng-deep .ant-tabs .ant-tabs-left-bar {
   background-color: #ff8d1a;
 }
@@ -34,8 +28,6 @@
   color: #fff;
 }
 :host ::ng-deep nav .ant-tabs-tab:hover {
-  /* color: black;
-  font-size: 18px; */
   color: #fff;
 }
 :host ::ng-deep .ant-tabs .ant-tabs-left-bar .ant-tabs-ink-bar{
@@ -43,13 +35,26 @@
 }
 :host ::ng-deep .ant-picker-range{
   border-color: #ff8d1a;
+  width: 204px;
+  border-radius:5px;
+  height: 30px;
+  float: right;
+  padding: 5px;
 }
-.tableH3{
-  font-size:20px;
-  font-weight: 800;
-  border-bottom:1px solid #ff8d1a;
+:host ::ng-deep .ant-tabs .ant-tabs-left-content{
+  box-sizing: border-box;
+  padding-top: 30px;
 }
-.orderData{
-  margin:20px 0px;
-  font-size: 18px;
+:host ::ng-deep .ant-tabs .ant-tabs-left-bar .ant-tabs-nav-wrap{
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+:host ::ng-deep .ant-tabs-nav .ant-tabs-tab{
+  height: 60px;
+  line-height: 44px;
+}
+app-tabledata{
+  height: 100%;
+  width:100%;
+  display: flex;
 }

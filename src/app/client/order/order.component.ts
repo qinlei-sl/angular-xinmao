@@ -10,18 +10,21 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  orderData=orderData;
-  dateFormat = 'yyyy/MM/dd';
-  dateRange:string[] = [];
+  orderData:any=orderData;
+  orderKey: number = 1;
+  dateRange: string[] = [];
+  design = orderData.design;
+  package = orderData.package
   constructor() { }
 
   ngOnInit() {
-    
-    console.log(Object.keys(this.orderData[0][0]))
-
+    // console.log(this.design)
   }
   onChange(result: Date): void {
-    console.log('onChange: ', result);
+    // console.log('onChange: ', result);
   }
-
+  //接受子组件数据
+  childData(value) {
+      this.orderData.design[2].data.push(...value)
+  }
 }

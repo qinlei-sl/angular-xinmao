@@ -1,17 +1,78 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-.container{
-   border: 2px solid #FF8D1A;
-   border-radius: 20px;
-   padding: 20px 20px;
-   height:100%;
-   margin: 0 10px;
+
+.container {
+  height: 100%;
+  color: rgba(0, 0, 0, .65)
 }
-.title h2{
-  border-bottom:1px solid #ff8a1a;
+
+.title {
+  border: 2px solid #FF8D1A;
+  margin: 0 10px;
+  border-radius: 20px;
+  padding: 20px 20px;
+  height: 100%;
+  overflow: hidden;
 }
-.ng-h3{
-  font-size:20px;
+
+
+.ng-h3 {
+  font-size: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #ff8d1a;
+  overflow: hidden;
+  padding-bottom: 15px;
+  
+}
+.header button {
+  float: right;
+  width: 100px;
+  height: 30px;
+  background-color: #ff8d1a;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.tableH3 {
+  font-size: 20px;
+  font-weight: 800;
+  float: left;
+  color: rgba(0, 0, 0, .65);
+}
+.main{
+  overflow: auto;
+  height: 100%;
+  width: 120%;
+  padding-bottom:20px;
+}
+.orderData {
+  margin: 20px 0px;
+  font-size: 18px;
+  position: relative;
+}
+.down,
+.waybill{
+  position: absolute;
+  right: 16%;
+  top:0;
+}
+.down{
+  width: 40px;
+  height: 40px;
+  outline:none;
+  border: #FF8D1A 1px solid;
+  background: #ff8d1a;
+  border-radius:5px;
+}
+.down img{
+  width:25px;
+}
+.downActive{
+  background-color: #fff;
 }

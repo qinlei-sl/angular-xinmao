@@ -1,5 +1,5 @@
 import { Router, ActivatedRoute } from '@angular/router';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +10,11 @@ export class FooterComponent implements OnInit {
   table: Array<string> = ['上传', '订单'];
   key: number = 0;
   id: any;
+  @Input()
+  set orderData(text:number) {
+    this.key = text;
+  };
+
   @Output() toParent = new EventEmitter();
   constructor(
     private router: Router,

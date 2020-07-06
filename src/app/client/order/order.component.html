@@ -1,20 +1,15 @@
-<app-footer></app-footer>
+<app-footer [orderData]="orderKey"></app-footer>
 <div class="order" nz-row>
   <nz-tabset nzTabPosition="left" nz-col nzSpan='24'>
     <nz-tab nzTitle="设计页" id="id">
       <div style="width: 100%; display: flex;" id="main" nz-row>
-        <app-tableData nz-col nzSpan="8" *ngFor="let item of orderData; let index = index">
-          <h3 class="tableH3">我是标题</h3>
-          <div ngProjectAs="div" *ngFor="let itemData of item ; let key = index" class="orderData">
-            <p>订单号：{{itemData.order}}</p>
-            <p>{{itemData.time}}</p>
-          </div>
-        </app-tableData>
-        <!-- <nz-range-picker [nzFormat]="dateFormat"></nz-range-picker> -->
+        <app-tableData [tableData]="design" nz-row (child)="childData($event)"></app-tableData>
       </div>
     </nz-tab>
     <nz-tab nzTitle="包裹页">
-      Content of Tab Pane 2
+     <div style="width: 100%; display: flex;" id="main" nz-row>
+       <app-tableData [tableData]="package"></app-tableData>
+     </div>
     </nz-tab>
   </nz-tabset>
 </div>

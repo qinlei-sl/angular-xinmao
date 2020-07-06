@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { AccountService } from '../server/account.service';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +16,9 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   returnUrl: any;
   //账号密码判断
-  account:Boolean;
+  account: Boolean;
   //定义判断是否按下登录按钮
-  flag:Boolean = false;
+  flag: Boolean = false;
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
@@ -44,12 +45,14 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     //按钮按下
-    
+    this.flag = true;
+    setTimeout(() => {
+      this.flag = false;
+    }, 5000);
     this.flag = true;
     var username:string = this.f.username.value
     var password: string = this.f.password.value;
     var url:string = "http://localhost:3000/login"
-
     this.accountService.login(username, password, url)
     this.account = this.accountService.accountFun()
   }
