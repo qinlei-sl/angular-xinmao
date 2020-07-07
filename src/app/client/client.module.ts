@@ -10,6 +10,7 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 import zh from '@angular/common/locales/zh';
 import { TableDataComponent } from './tableData/tableData.component';
+import { DetailsComponent } from './details/details.component';
 
 registerLocaleData(zh);
 
@@ -27,6 +28,7 @@ registerLocaleData(zh);
       UploadComponent,
       OrderComponent,
       TableDataComponent,
+      DetailsComponent
    ]
 })
 export class ClientModule { }

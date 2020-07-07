@@ -20,6 +20,7 @@ import { UploadComponent } from './client/upload/upload.component';
 import { WebUploaderModule, WebUploaderConfig } from 'ngx-webuploader'
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import zh from '@angular/common/locales/zh';
 registerLocaleData(zh);
 registerLocaleData(en);
@@ -29,6 +30,9 @@ import { OrderComponent } from './client/order/order.component';
 import { TableDataComponent } from './client/tableData/tableData.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { DetailsComponent } from './client/details/details.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerUploadComponent } from './customer/customer-upload/customer-upload.component';
 
 @NgModule({
    declarations: [
@@ -38,7 +42,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
       FooterComponent,
       UploadComponent,
       OrderComponent,
-      TableDataComponent
+      TableDataComponent,
+      DetailsComponent,
+      CustomerComponent,
+      CustomerUploadComponent
    ],
    imports: [
       BrowserModule,
@@ -55,8 +62,9 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
       NzDatePickerModule,
       NzTabsModule,
       NzButtonModule,
-      NzIconModule ,
-      //文件加载模块
+      NzIconModule,
+      NzDropDownModule,
+      //文件加载模块\nWebUploaderModule.forRoot(<WebUploaderConfig>\noptions
       WebUploaderModule.forRoot(<WebUploaderConfig>{
          options: <Options>{
             swf: './assets/webuploader-0.1.5/Uploader.swf',

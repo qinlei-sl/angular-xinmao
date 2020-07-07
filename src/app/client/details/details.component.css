@@ -1,0 +1,142 @@
+div {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.container {
+  height: 84vh;
+  padding: 0 50px;
+  min-width: 1246px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+
+}
+
+.header h3 {
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.header p {
+  width: 70px;
+  height: 30px;
+  border: 1px solid #ff8d1a;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 30px;
+  color: #ff8d1a;
+}
+
+.header button {
+  border: 0;
+  outline: 0;
+  width: 100px;
+  background-color: #ff8d1a;
+  line-height: 30px;
+  height: 36px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+.main div {
+  padding: 0 10px;
+  font-weight: bold;
+  text-indent: 1em;
+  height: 67vh;
+  position: relative;
+}
+
+.main div div {
+  border: #ff8d1a 2px solid;
+  border-radius: 10px;
+}
+
+.main .title {
+  border-bottom: #ff8d1a 1px solid;
+  line-height: 50px;
+  text-indent: 1em;
+  font-weight: bold;
+}
+
+.main p {
+  margin: 18px 0;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.main .annex {
+  height: 266px;
+}
+
+div i {
+  display: block;
+  width: 20px;
+  height: 30px;
+  margin: 0 10px;
+  background: url(../../../assets/images/upload.png) no-repeat 0 0 /100%;
+}
+
+.main #drag {
+  height: 150px;
+  margin-top: 20px;
+  border-width: 1px;
+  background-color: #FAFAFA;
+  border-radius: 5px;
+}
+
+#drag img {
+  width: 80px;
+  display: block;
+  margin: 25px auto;
+}
+
+#drag p {
+  width: 100%;
+  font-size: 18px;
+}
+
+#drag {
+  text-align: center;
+}
+
+#progress {
+  border: none;
+  height: 100px;
+}
+
+#proviwe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: none;
+  padding-top: 51px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proviwe #proviwe div {
+  width: 80%;
+  height: 50%;
+  border: none;
+  border-radius: 0;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
